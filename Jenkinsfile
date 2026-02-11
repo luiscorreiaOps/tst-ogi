@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('List') {
+        stage('Build') {
             steps {
-             sh   'ls /tmp'
+             sh   "docker build -t jenkins:latest ."
             }
         }
 
